@@ -1,0 +1,5 @@
+#!bin/bash
+echo "$1: Hi $2, How are you!"
+echo "$2: Hi $1, i am fine, how are things"
+echo "$1: All looks good $2, i am learning shell scriptin now"
+echo "$2: Looks good $1, it is better for your future"
