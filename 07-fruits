@@ -1,0 +1,7 @@
+#!bin/bash
+
+fruits=("apple" "kiwi" "orange")
+echo "first fruit $1"
+echo "second fruit $2"
+echo "Third fruit $3"
+echo "all fruits $@"
