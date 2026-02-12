@@ -1,0 +1,5 @@
+#!bin/bash
+echo "Ramesh: Hi Suresh, How are you!"
+echo "Suresh: Hi Ramesh, i am fine, how are things"
+echo "Ramesh: All looks good suresh, i am learning shell scriptin now"
+echo "Suresh: Looks good Ramesh, it is better for your future"
