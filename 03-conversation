@@ -1,0 +1,7 @@
+#!bin/bash
+Name1=Thiru
+N2=Manju
+echo "$Name1: Hi $N2, How are you!"
+echo "$N2: Hi $Name1, i am fine, how are things"
+echo "$Name1: All looks good $N2, i am learning shell scriptin now"
+echo "$N2: Looks good $Name1, it is better for your future"
