@@ -1,0 +1,5 @@
+#!bin/bash
+read -p "enter your name:" name
+echo "Your name is $name"
+read -p "enter your password" passwd
+echo "your password is $passwd"
