@@ -1,5 +1,5 @@
 #!bin/bash
-num=20
+num=$1
 if [ $num -gt 25 ]
 then
 echo "$num is greater than 25"
