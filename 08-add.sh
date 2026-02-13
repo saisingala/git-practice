@@ -2,11 +2,11 @@
 date 
 a=$1
 b=$2
-add= ` expr $a + $b `
-echo "add: $add"
+add=` expr $a + $b `
+echo "add= $add"
 subtract=` expr $a - $b `
-echo "Sub: $subtract"
+echo "Sub= $subtract"
 Multiply=` expr $a * $b `
-echo "Multiply: $Multiply"
+echo "Multiply= $Multiply"
 Division=` expr $a / $b `
-echo "Div:$Division"
+echo "Div= $Division"
