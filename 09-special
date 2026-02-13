@@ -1,0 +1,9 @@
+#!bin/bash
+echo "First argument: $1"
+echo "second argument: $1"
+echo "all variable passed through an argument: $@"
+echo "Number of variables passed: $#"
+echo "Current script name: $0"
+echo "PID of current script name: $$"
+echo "PID of previos script name: $!"
+echo "Status of previous command:$?"
