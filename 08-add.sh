@@ -2,6 +2,6 @@
 date 
 a=$1
 b=$2
-add=(( $a + $b ))
-echo "$a and $b is = $add"
+ADD=(($a+$b))
+echo "$a and $b is = $ADD"
 
