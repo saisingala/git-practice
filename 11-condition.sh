@@ -1,8 +1,8 @@
 #!bin/bash
 USERID=$(id -u)
-if [ $USERID = 0 ];
+if [ $USERID -ne 0 ];
 then
-echo "you are connected to sudo user"
-else 
-echo "you are not connected to sudo user"
+echo "Please run the script with root privilages"
+exit 1
 fi
+dnf install git
