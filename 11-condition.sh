@@ -23,7 +23,7 @@ fi
 dnf list installed mysql
 if [ $? -ne 0 ]; then
    echo "Mysql is not installed.. going to install it"
-   dnf install mysqld -y
+   dnf install mysql -y
   if [ $? -ne 0 ]; then
       echo "Installation is not success. check it"
       exit 1
