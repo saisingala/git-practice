@@ -6,19 +6,19 @@ if [ $USERID -ne 0 ];
    exit 1
 fi
 
-# dnf list installed git
-# if [ $? -ne 0 ]; then
-#      echo "Installing git"
-#      dnf install git -y
-#    if [ $? -ne 0 ]; then
-#          echo "git installation is not success. check it"
-#          exit 1
-#    else
-#          echo "git installation success" 
-#     fi
-# else 
-#     echo " Git is already installed nothing to do..."
-# fi
+dnf list installed git
+if [ $? -ne 0 ]; then
+     echo "Installing git"
+     dnf install git -y
+   if [ $? -ne 0 ]; then
+         echo "git installation is not success. check it"
+         exit 1
+   else
+         echo "git installation success" 
+    fi
+else 
+    echo " Git is already installed nothing to do..."
+fi
 
 dnf list installed mysql
 if [ $? -ne 0 ]; then
