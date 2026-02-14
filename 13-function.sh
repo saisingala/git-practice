@@ -2,7 +2,13 @@
 USERID=$(id -u)
 
 VALIDATE (){
-    echo "exit status: $1"
+   
+    if [ $1 -ne 0 ]; then
+        echo " $2 is ...Failed"
+        exit 1
+    else 
+        echo "$2 is ....Success"
+    fi        
 }
 if [ $USERID -ne 0 ];
  then
@@ -12,7 +18,7 @@ fi
 
 dnf list installed git
 
-VALIDATE $?
+VALIDATE $? "Listing git "
 
 # if [ $? -ne 0 ]; then
 #      echo "Installing git"
