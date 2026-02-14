@@ -15,6 +15,7 @@ if [ $? -ne 0 ]; then
          exit 1
    else
          echo "git installation success" 
+    fi
 else 
     echo " Git is already installed nothing to do..."
 fi
