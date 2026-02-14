@@ -1,6 +1,14 @@
 #!bin/bash
 USERID=$(id -u)
 
+CHECK_ROOT(){
+    if [ $USERID -ne 0 ];
+      then
+      echo "Please run the script with root privilages"
+      exit 1
+    fi
+}
+
 VALIDATE (){
    
     if [ $1 -ne 0 ]; then
@@ -10,11 +18,8 @@ VALIDATE (){
         echo "$2 is ....Success"
     fi        
 }
-if [ $USERID -ne 0 ];
- then
-   echo "Please run the script with root privilages"
-   exit 1
-fi
+
+CHECK_ROOT
 
 dnf list installed git
 
