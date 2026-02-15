@@ -52,6 +52,6 @@ for package in $@
            dnf install $package -y  &>> $LOG_FILE
            VALIDATE $? "Listing $package" 
         else
-           echo -e "$package is $Y already installed....nothing do $N"  | tee -a &>> $LOG_FILE
+           echo -e "$package is $Y already installed....nothing do $N" | tee -a &>> $LOG_FILE
         fi      
  done
