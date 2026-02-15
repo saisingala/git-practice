@@ -1,6 +1,6 @@
 #!bin/bash
-for place in Mysore bangalore Hyderabad
+for num in {1..20}
 
     do
-    echo "Infosys DC is: $place"
+    echo "$num"
     done
