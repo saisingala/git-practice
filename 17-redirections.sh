@@ -30,7 +30,16 @@ VALIDATE (){
     fi        
 }
 
+USAGE(){
+    echo -e "$G Usage:: sudo sh 17-redirection.sh package1 package2 .. $N"
+    exit 1
+}
+
 CHECK_ROOT
+if [ $# -eq 0 ]
+then
+     USAGE
+fi
 
 for package in $@
  do
@@ -41,6 +50,6 @@ for package in $@
            dnf install $package -y  &>> $LOG_FILE
            VALIDATE $? "Listing $package" 
         else
-           echo "$package is $Y already installed....nothing do $N" &>> $LOG_FILE
+           echo -e "$package is $Y already installed....nothing do $N" &>> $LOG_FILE
         fi      
  done
