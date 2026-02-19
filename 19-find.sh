@@ -17,6 +17,6 @@ else
     echo "Mentioned direcory is present"
 fi
 
-FILES=$(find $SRC_DIR -type -f -mtime -10)
+FILES=$(find $SRC_DIR -mtime -10)
 
 echo "$FILES"
