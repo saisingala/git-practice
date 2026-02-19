@@ -8,7 +8,7 @@ then
     exit 1
 fi
 
-SRC_DIR=/home/ec2-user/logs
+SRC_DIR=/var/log/sai
 
 if [ -d $SRC_DIR ]
 then echo "$SRC_DIR direcory is present"
