@@ -18,7 +18,7 @@ else
     exit 1
 fi
 
-FILES=$(find $SRC_DIR -name *.log -mtime -10)
+FILES=$(find $SRC_DIR -name "*.log" -mtime +10)
 
 echo "Files: $FILES"
 
