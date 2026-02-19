@@ -8,15 +8,16 @@ then
     exit 1
 fi
 
-SRC_DIR=/var/log/sai
+SRC_DIR=/home/ec2-user/git-practice/logs
 
-if [ ! -d $SRC_DIR ]
-then echo "Mentioned direcory is not present"
-     exit 1
+if [ -d $SRC_DIR ]
+then echo "$SRC_DIR direcory is present"
+     
 else     
-    echo "Mentioned direcory is present"
+    echo "$SRC_DIR direcory is not present"
+    exit 1
 fi
 
-FILES=$(find $SRC_DIR -mtime -10 exec ls -lrt {} \;)
+FILES=$(find $SRC_DIR -name *.log -mtime -10 exec ls -lrt {} \;)
 
 echo "$FILES"
