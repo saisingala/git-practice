@@ -18,13 +18,13 @@ else
     exit 1
 fi
 
-FILES=$(find $SRC_DIR -name *.log -mtime -10 exec ls -lrt {} \;)
+FILES=$(find $SRC_DIR -name *.log -mtime -10)
 
 echo "Files: $FILES"
 
 while IFS= read -r line # IFS internal field separator, empty it will ignore while space. -r for not  to ignore special characters like /#
 do
-   echo "Deleting line : $line
+   echo "Deleting line : $line"
 done <<< $FILES
 
 
