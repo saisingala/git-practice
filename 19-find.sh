@@ -9,6 +9,7 @@ then
 fi
 
 SRC_DIR=/var/log/sai
+
 if [ ! -d $SRC_DIR ]
 then echo "Mentioned direcory is not present"
      exit 1
@@ -16,6 +17,6 @@ else
     echo "Mentioned direcory is present"
 fi
 
-FILES=$(find $SRC_DIR -type f *.log -mtime -10)
+FILES=$(find $SRC_DIR -type -f -mtime -10)
 
 echo "$FILES"
