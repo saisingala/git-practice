@@ -8,7 +8,7 @@ then
     exit 1
 fi
 
-SRC_DIR=/home/ec2-user/git-practice
+SRC_DIR=/var/log/sai
 if [ ! -d $SRC_DIR ]
 then echo "Mentioned direcory is not present"
      exit 1
