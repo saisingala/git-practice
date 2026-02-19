@@ -1,13 +1,4 @@
 #!bin/bash
-
-USERID=$(id -u)
-
-if [ $USERID -ne 0 ]
-then
-    echo "You need root privilages"
-    exit 1
-fi
-
 SRC_DIR=/home/ec2-user/logs
 
 if [ -d $SRC_DIR ]
