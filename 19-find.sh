@@ -8,7 +8,7 @@ then
     exit 1
 fi
 
-SRC_DIR=/var/log/sai
+SRC_DIR=/home/ec2-user/logs
 
 if [ -d $SRC_DIR ]
 then echo "$SRC_DIR direcory is present"
@@ -18,7 +18,7 @@ else
     exit 1
 fi
 
-FILES=$(find $SRC_DIR -name "*.log" -mtime +10)
+FILES=$(find $SRC_DIR -name "*.log")
 
 echo "Files: $FILES"
 
