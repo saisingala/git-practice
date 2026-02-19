@@ -28,7 +28,7 @@ if [ $? -ne 0 ]; then
      echo "Installing git"
      dnf install git -y
 
-     VALIDATE $? "Listing GIT "
+     VALIDATE $? "Listing GIT " #$1 $2
 else 
     echo " Git is already installed nothing to do..."
 fi
