@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 SRC_DIR=$1
 DEST_DIR=$2
