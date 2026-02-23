@@ -15,7 +15,26 @@ USAGE(){
 
 #CHECK THE SOURCE AND DESTINATION ARE PROVIDED
 
-if [ $# -lt 2 ]
+if [ $# -lt 2 ] # or we can write -z is empty or not
 then
     USAGE
+fi
+
+if [ ! -d SRC_DIR ]
+then 
+   echo -e "$SRC_DIR $R not exists.. $N please check"
+fi
+
+if [ ! -d DEST_DIR ]
+then 
+   echo -e "$DEST_DIR $R not exists.. $N please check"
+fi
+
+FILES=$(find ${SRC_DIR} -name "*.log" -mtime $DAYS)
+
+if [ $FILES ]
+then
+   echo " Files are found"
+else
+    echo "No files found"
 fi
