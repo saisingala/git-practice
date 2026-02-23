@@ -2,7 +2,7 @@
 
 SRC_DIR=$1
 DEST_DIR=$2
-DAYS=${3:+14} #this is optional if user provides ok otherwise it will take 14 days
+DAYS=${3:-14} #this is optional if user provides ok otherwise it will take 14 days
 TIMESTAMP=$(date +%d-%m-%Y-%H-%M-%S)
 
 R="\e[31m"
@@ -31,7 +31,7 @@ then
    echo -e "$DEST_DIR $R not exists.. $N please check"
 fi
 
-FILES=$(find ${SRC_DIR} -name "*.log" -mtime $DAYS)
+FILES=$(find ${SRC_DIR} -name "*.log" -mtime +$DAYS)
 
 echo "files: $FILES"
 
@@ -58,3 +58,4 @@ then
 else
     echo "No files is older than $DAYS"
 fi
+
