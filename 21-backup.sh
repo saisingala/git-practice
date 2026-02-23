@@ -31,7 +31,7 @@ then
    echo -e "$DEST_DIR $R not exists.. $N please check"
 fi
 
-FILES=$(find ${SRC_DIR} -name "*.log" -mtime -14)
+FILES=$(find ${SRC_DIR} -name "*.log" -mtime $DAYS)
 
 echo "files: $FILES"
 
@@ -56,5 +56,5 @@ then
    fi  
 
 else
-    echo "No files is older than $DAYS found"
+    echo "No files is older than $DAYS"
 fi
