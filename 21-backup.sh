@@ -10,10 +10,12 @@ N="\e[0m"
 Y="\e[33m"
 
 USAGE(){
-    echo -e "$G Usage $Y <Source> <Destination> <DAYS optional>"
+    echo -e "$G Usage $Y <Source> <Destination> <DAYS optional>$N"
 }
 
-if[ $# -lt 2 ]
+#CHECK THE SOURCE AND DESTINATION ARE PROVIDED
+
+if [ $# -lt 2 ]
 then
     USAGE
 fi
