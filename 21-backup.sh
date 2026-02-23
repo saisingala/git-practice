@@ -36,5 +36,5 @@ if [ $FILES ]
 then
    echo " Files are found"
 else
-    echo "No files found"
+    echo "No files is older than $DAYS found"
 fi
