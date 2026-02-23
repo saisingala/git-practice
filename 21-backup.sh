@@ -32,7 +32,9 @@ fi
 
 FILES=$(find ${SRC_DIR} -name "*.log" -mtime $DAYS)
 
-if [ -n $FILES ]
+echo "files: $FILES"
+
+if [ ! -z $FILES ] #true if files are empty, ! makes expression false
 then
    echo " Files are found"
 else
