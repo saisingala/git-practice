@@ -12,6 +12,7 @@ Y="\e[33m"
 
 USAGE(){
     echo -e "$G Usage $Y <Source> <Destination> <DAYS optional>$N"
+    exit 1
 }
 
 #CHECK THE SOURCE AND DESTINATION ARE PROVIDED
