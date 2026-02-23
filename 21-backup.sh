@@ -31,7 +31,7 @@ then
    echo -e "$DEST_DIR $R not exists.. $N please check"
 fi
 
-FILES=$(find ${SRC_DIR} -name "*.log" -mtime $DAYS)
+FILES=$(find ${SRC_DIR} -name "*.log" -mtime -14)
 
 echo "files: $FILES"
 
