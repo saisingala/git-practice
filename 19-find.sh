@@ -1,11 +1,16 @@
 #!bin/bash
 SRC_DIR=/home/ec2-user/logs
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"
+
 if [ -d $SRC_DIR ]
-then echo "$SRC_DIR direcory is present"
+then echo -e "$SRC_DIR $G is exists $N"
      
 else     
-    echo "$SRC_DIR direcory is not present"
+    echo -e "$SRC_DIR $R is not exists $N"
     exit 1
 fi
 
