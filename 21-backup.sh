@@ -20,19 +20,19 @@ then
     USAGE
 fi
 
-if [ ! -d SRC_DIR ]
+if [ ! -d $SRC_DIR ]
 then 
    echo -e "$SRC_DIR $R not exists.. $N please check"
 fi
 
-if [ ! -d DEST_DIR ]
+if [ ! -d $DEST_DIR ]
 then 
    echo -e "$DEST_DIR $R not exists.. $N please check"
 fi
 
 FILES=$(find ${SRC_DIR} -name "*.log" -mtime $DAYS)
 
-if [ $FILES ]
+if [ -n $FILES ]
 then
    echo " Files are found"
 else
