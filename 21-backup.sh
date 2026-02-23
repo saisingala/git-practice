@@ -3,6 +3,7 @@
 SRC_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} #this is optional if user provides ok otherwise it will take 14 days
+TIMESTAMP=$(date +%d-%m-%Y-%H-%M-%S)
 
 R="\e[31m"
 G="\e[32m"
@@ -37,6 +38,24 @@ echo "files: $FILES"
 if [ ! -z $FILES ] #true if files are empty, ! makes expression false
 then
    echo " Files are found"
+   ZIP_FILE="$DEST_DIR/arch-logs-$TIMESTAMP.zip"
+   find ${SRC_DIR} -name "*.log" -mtime $DAYS|zip $ZIP_FILE -@
+
+   #check if zip file is created or not
+   if [ -f $ZIP_FILE ]
+   then
+       echo "Successfully zipped files older than $DAYS"
+       while IFS= read -r file # IFS internal field separator, empty it will ignore while space. -r for not  to ignore special characters like /#
+          do
+             echo "Deleting file : $file"
+            rm -rf $file
+          done <<< $FILES
+    else
+       echo -e "Zipping the files is $R Failed $N" 
+       exit 1 
+   fi  
+
+
 else
     echo "No files is older than $DAYS found"
 fi
