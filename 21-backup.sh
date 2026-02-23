@@ -35,7 +35,7 @@ FILES=$(find ${SRC_DIR} -name "*.log" -mtime +$DAYS)
 
 echo "files: $FILES"
 
-if [ -n "$FILES" ] #true if files are empty,! makes expression false
+if [ ! -z "$FILES" ] #true if files are empty,! makes expression false
 then
    echo " Files are found"
    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
