@@ -2,7 +2,7 @@
 
 SRC_DIR=$1
 DEST_DIR=$2
-DAYS=${3:-14} #this is optional if user provides ok otherwise it will take 14 days
+DAYS=${3:+14} #this is optional if user provides ok otherwise it will take 14 days
 TIMESTAMP=$(date +%d-%m-%Y-%H-%M-%S)
 
 R="\e[31m"
