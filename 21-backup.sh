@@ -55,7 +55,6 @@ then
        exit 1 
    fi  
 
-
 else
     echo "No files is older than $DAYS found"
 fi
